@@ -22,11 +22,13 @@ puts 'Creating boats...'
 20.times do
   Boat.create!(
     name: Faker::TvShows::RuPaul.queen,
-    description: Faker::Lorem.paragraph,
+    # description text
+    description: Faker::Lorem.paragraph(sentence_count: 7),
     price: rand(249..10_459),
     guests: rand(1..15),
     location: Faker::Address.city,
-    user: User.all.sample
+    user: User.all.sample,
+    category: ['Sailboat', 'Motorboat', 'Catamaran', 'Yacht', 'Pirate Ship', 'Air Mattress', 'Transporter'].sample
   )
 end
 
