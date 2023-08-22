@@ -1,10 +1,12 @@
-<div class="form">
-  <div class="container">
-    <ul><%= simple_form_for(@boat) do |f| %>
-      <li><%= f.input :category %></li>
-      <li><%= f.input :location %></li>
-      <li><%= f.input :guests %></li>
-      <button><%= f.submit %></button>
-    <% end %></ul>
+<div class="search-form-container">
+  <div class="form-row">
+    <%= simple_form_for(@boat) do |f| %>
+      <div class="form-grid">
+        <%= f.input :category, label: false, placeholder: "Category", collection: Boat::CATEGORIES %>
+        <%= f.input :location, label: false, placeholder: "Location" %>
+        <%= f.input :guests, label: false, placeholder: "Guests" %>
+        <%= f.submit class: "mb-3 button" %>
+      </div>
+    <% end %>
   </div>
 </div>
