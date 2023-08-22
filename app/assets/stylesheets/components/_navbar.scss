@@ -1,6 +1,7 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background-image: linear-gradient(to right, #FFEA9F, #A9DDDA);
+  // background-image: linear-gradient(to right, #FFEA9F, #A9DDDA);
+  background-image: linear-gradient(to right, $light-yellow, $dark-blue);
   padding: 5px 50px 5px 50px;
 }
 
@@ -18,13 +19,12 @@
 }
 
 .nav-item a {
-  color: #5E3D8C;
+  color: #fff !important;
   font-weight: 600;
   font-family: 'Montserrat', sans-serif;
 }
 
 .nav-item a:hover {
-  color: #2E1760;
+  color: $dark-purple !important;
   text-decoration: none;
-  font-family: 'Montserrat', sans-serif;
 }
