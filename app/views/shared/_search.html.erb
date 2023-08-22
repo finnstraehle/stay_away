@@ -1,0 +1,10 @@
+<div class="form">
+  <div class="container">
+    <ul><%= simple_form_for(@boat) do |f| %>
+      <li><%= f.input :category %></li>
+      <li><%= f.input :location %></li>
+      <li><%= f.input :guests %></li>
+      <button><%= f.submit %></button>
+    <% end %></ul>
+  </div>
+</div>
