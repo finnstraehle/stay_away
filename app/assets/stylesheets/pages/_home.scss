@@ -1,1 +1,42 @@
 // Specific CSS for your home-page
+.homepage {
+  width: 100%;
+  color: white;
+  background-image: asset-url("sea_sunset2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+  position: relative;
+}
+
+.homepage .container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 600px;
+  padding: 20px;
+}
+
+.homepage .container .homepage-logo {
+  width: 400px;
+  align-self: center;
+  margin: 180px 0 120px 0;
+  filter: drop-shadow(1px 1px 2px #5959592e);
+}
+
+.homepage .container .menu-form {
+  align-self: center;
+}
+
+.homepage .container .menu-form a {
+  color: white;
+  text-decoration: none;
+}
+
+.homepage .container .menu-form a:hover {
+  color: #f0d2d3;
+  text-decoration: none;
+  text-shadow: 1px 1px 2px #595959b3;
+}

@@ -1,6 +1,7 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background-image: linear-gradient(to right, #FFEA9F, #A9DDDA);
+  padding: 5px 50px 5px 50px;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -8,5 +9,22 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 150px;
+  margin-left: 20px;
+}
+
+.nav-item {
+  margin-right: 20px;
+}
+
+.nav-item a {
+  color: #fff;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.nav-item a:hover {
+  color: #2E1760;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
 }
