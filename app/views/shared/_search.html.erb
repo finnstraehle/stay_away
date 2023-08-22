@@ -5,7 +5,7 @@
         <%= f.input :category, label: false, placeholder: "Category", collection: Boat::CATEGORIES %>
         <%= f.input :location, label: false, placeholder: "Location" %>
         <%= f.input :guests, label: false, placeholder: "Guests" %>
-        <%= f.submit class: "mb-3 button" %>
+        <%= f.submit :button, class: "mb-3 button", value: "Search" %>
       </div>
     <% end %>
   </div>
