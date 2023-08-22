@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_21_151135) do
+ActiveRecord::Schema[7.0].define(version: 2023_08_22_101541) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -40,10 +40,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_21_151135) do
   create_table "crew_members", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.bigint "boats_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["boats_id"], name: "index_crew_members_on_boats_id"
+    t.bigint "boat_id", null: false
+    t.index ["boat_id"], name: "index_crew_members_on_boat_id"
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -64,6 +64,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_21_151135) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "first_name"
+    t.string "last_name"
+    t.date "birth_date"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
@@ -71,6 +74,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_21_151135) do
   add_foreign_key "boats", "users"
   add_foreign_key "bookings", "boats"
   add_foreign_key "bookings", "users"
-  add_foreign_key "crew_members", "boats", column: "boats_id"
+  add_foreign_key "crew_members", "boats"
   add_foreign_key "reviews", "bookings"
 end
