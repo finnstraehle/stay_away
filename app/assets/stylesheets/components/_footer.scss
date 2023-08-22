@@ -1,15 +1,25 @@
-.footer {
+footer {
   background-color: #2E1760;
   width: 100%;
   color: #fff;
-  bottom: 0;
-  position: absolute;
+  // bottom: 0;
+  // position: absolute;
 }
 
-.footer .container {
+footer .container {
   padding: 30px;
 }
 
-.footer .container p {
+footer .container p {
   font-size: 12px;
+}
+
+
+
+
+.body-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
 }

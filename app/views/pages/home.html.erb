@@ -1,10 +1,11 @@
 <div class="homepage">
-    <%# <%= image_tag "sea.jpg" %>
-  <div class="container">
+  <div class="home-container">
     <%= image_tag "big_logo.png", class: "homepage-logo" %>
-    <%# <p>Find the perfect boat for your escape</p> %>
-    <div class="menu-form">
-      <a href="#"><h1>Are you ready to sail the sea?</h1></a>
+  </div>
+  <div class="search-box">
+    <div class="form-container">
+      <h1>Are you ready to sail the sea?</h1>
+      <%= render "shared/search" %>
     </div>
   </div>
 </div>
