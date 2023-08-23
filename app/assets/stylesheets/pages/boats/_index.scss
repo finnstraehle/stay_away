@@ -20,7 +20,8 @@
 }
 
 .grid-boats .card-boat .boat-details {
-  padding: 30px;
+  padding: 20px;
+  position: relative;
   h4 {
     color: $dark-purple;
     font-size: 20px;
@@ -37,8 +38,11 @@
     position: relative;
   }
   .price {
-    color: $light-purple;
-    font-size: 20px;
-    margin-bottom: 0;
+    color: $extra-light-purple;
+    font-size: 17px;
+    margin: 5px;
+    position: absolute;
+    right: 0px;
+    top: 60px;
   }
 }
