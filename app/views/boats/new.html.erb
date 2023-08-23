@@ -1,2 +1,18 @@
-<h1>Add New Listing</h1>
-
+<div class="container">
+  <h1>Add New Boat Listing</h1>
+  <div style="width: 900px; margin: 0 auto;"> <!-- change to global container -->
+    <div class="booking-container">
+      <%= simple_form_for(@boat) do |f| %>
+        <%= f.input :name %>
+        <%= f.input :description %>
+        <%= f.input :price %>
+        <%= f.input :guests %>
+        <%= f.input :location %>
+        <%= f.input :category %>
+        <div class="form-group" style="display: flex;">
+          <%= f.button :submit, "Confirm", class: "button m-3" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
