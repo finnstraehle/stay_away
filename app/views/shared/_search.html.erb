@@ -1,15 +1,13 @@
-<div class="search-box">
-  <div class="search-form-container">
-    <div class="form-row">
-      <%= simple_form_for(@boat) do |f| %>
-        <div class="form-grid">
-          <%= f.input :category, label: false, placeholder: "Category", collection: Boat::CATEGORIES %>
-          <%= f.input :location, label: false, placeholder: "Location" %>
-          <%= f.input :guests, label: false, placeholder: "Guests" %>
-          <%= f.submit "Search", class: "mb-3 button" %>
-        </div>
-      <% end %>
-    </div>
+<div class="search-form-container">
+  <div class="form-row">
+    <%= simple_form_for(@boat) do |f| %>
+      <div class="form-grid">
+        <%= f.input :category, label: false, prompt: "Category", collection: Boat::CATEGORIES %>
+        <%= f.input :location, label: false, placeholder: "Location" %>
+        <%= f.input :guests, label: false, placeholder: "Guests" %>
+        <%= f.submit :button, class: "mb-3 button", value: "Search" %>
+      </div>
+    <% end %>
   </div>
 </div>
 

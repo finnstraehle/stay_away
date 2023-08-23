@@ -1,7 +1,8 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background-image: linear-gradient(to right, #FFEA9F, #A9DDDA);
+  background-image: linear-gradient(to right, $light-yellow, $dark-blue);
   padding: 5px 50px 5px 50px;
+  height: 10vh;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -15,16 +16,14 @@
 
 .nav-item {
   margin-right: 20px;
+  a {
+  color: $dark-purple !important;
+  font-weight: bold;
+     &:hover {
+       color: #fff !important;
+       text-decoration: none;
+    }
+  }
 }
 
-.nav-link {
-  color: #2E1760 !important;
-  font-weight: 600;
-  font-family: 'Montserrat', sans-serif;
-}
 
-.nav-link:hover {
-  color: #fff !important;
-  text-decoration: none;
-  font-family: 'Montserrat', sans-serif;
-}

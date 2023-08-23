@@ -1,19 +1,18 @@
 .button {
   // width: 180px;
   // height: 72px;
-  border-radius: 20px;
-  background-color: #FFEA9F !important;
+  border-radius: 10px;
+  background-color: $light-yellow !important;
   border: none;
-  color: #2E1760 !important;
+  color: $dark-purple !important;
   font-size: 14px;
   font-weight: 600;
   // padding: 15px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-}
-
-.button:hover {
-  background-color: #2E1760  !important;
-  color: #FFEA9F !important;
+  &:hover {
+    background-color: $dark-yellow !important;
+    color: $dark-purple !important;
+  }
 }

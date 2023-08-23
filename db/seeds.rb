@@ -27,8 +27,7 @@ puts 'Creating boats...'
     guests: rand(1..15),
     location: Faker::Address.city,
     user: User.all.sample,
-    category: ['Sailboat', 'Motorboat', 'Catamaran', 'Yacht', 'Pirate Ship', 'Cargo Ship', 'Inflatable Unicorn'].sample
-    # change to CATEGORIES
+    category: Boat::CATEGORIES.sample
   )
 end
 

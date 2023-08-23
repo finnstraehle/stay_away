@@ -1,24 +1,23 @@
 // Import Google fonts
-// @import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
+// @import url('https://fonts.googleapis.com/css?family=Nunito:400,700%7CWork+Sans:400,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Krub:ital,wght@0,200;0,400;0,600;1,200;1,400&family=Podkova:wght@400;600;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Antic+Slab&family=Gloock&family=Montserrat:ital,wght@0,200;0,400;0,600;0,800;1,200;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,700;0,800;1,200;1,400&family=Quattrocento:wght@400;700&display=swap');
 
 // Define fonts for body and headers
-// $body-font: "Work Sans", "Helvetica", "sans-serif";
-// $headers-font: "Nunito", "Helvetica", "sans-serif";
-// $body-font: 'Krub', sans-serif;
-// $headers-font: 'Podkova', serif;
-
 $body-font: 'Montserrat', sans-serif;
-$headers-font: 'Gloock', serif;
+$headers-font: 'Quattrocento', serif;
+$headers-font-weight: 700;
 
+h1, h2, h3, h4, h5 {
+  font-family: 'Quattrocento', serif;
+  font-weight: $headers-font-weight;
+}
 
-// To use a font file (.woff) uncomment following lines
-// @font-face {
-//   font-family: "Font Name";
-//   src: font-url('FontFile.eot');
-//   src: font-url('FontFile.eot?#iefix') format('embedded-opentype'),
-//        font-url('FontFile.woff') format('woff'),
-//        font-url('FontFile.ttf') format('truetype')
-// }
-// $my-font: "Font Name";
+h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+a {
+  font-weight: 700;
+}
