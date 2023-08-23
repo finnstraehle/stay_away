@@ -5,9 +5,8 @@
         <%= f.input :category, label: false, prompt: "Category", collection: Boat::CATEGORIES %>
         <%= f.input :location, label: false, placeholder: "Location" %>
         <%= f.input :guests, label: false, placeholder: "Guests" %>
-        <%= f.submit :button, class: "mb-3 button", value: "Search" %>
+        <%= f.submit :button, class: "mb-3 button", value: "Search" %>   <!-- change that it links to boats/index -->
       </div>
     <% end %>
   </div>
 </div>
-

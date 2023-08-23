@@ -1,9 +1,7 @@
 footer {
   background-color: #fff;
   width: 100%;
-  color: $dark-purple;
   border-top: 1px solid $extra-light-grey;
-  ;
 }
 
 footer .footer-container {
@@ -14,6 +12,7 @@ footer .footer-container {
 footer .footer-container p {
   font-size: 12px;
   margin-bottom: 0;
+  color: black;
 }
 
 .body-container {
