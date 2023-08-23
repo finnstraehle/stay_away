@@ -1,11 +1,22 @@
-<div class="homepage">
-  <div class="home-container">
-    <%= image_tag "big_logo.png", class: "homepage-logo" %>
-  </div>
+<%# <div class="homepage">
+  <div class="home-container"> %>
+    <%# <%=# image_tag "big_logo.png", class: "homepage-logo" %>
+  <%# </div>
   <div class="search-box">
     <div class="form-container">
       <h1>Are you ready to sail the sea?</h1>
       <%= render "shared/search" %>
+    <%# </div>
+  </div>
+</div>  %>
+
+<div class="homepage">
+  <div class="home-container">
+    <div class="search-box">
+      <div class="form-container">
+        <h1>Are you ready to sail the sea?</h1>
+        <%= render "shared/search" %>
+      </div>
     </div>
   </div>
 </div>
