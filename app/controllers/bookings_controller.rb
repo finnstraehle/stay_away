@@ -9,6 +9,7 @@ class BookingsController < ApplicationController
 
   def new
     @booking = Booking.new
+    @boat = Boat.all[2] # change to params[:boat_id]
   end
 
   def create
