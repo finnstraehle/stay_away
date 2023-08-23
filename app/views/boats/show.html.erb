@@ -1,20 +1,13 @@
-<div class="page-container">
-  <div class="container">
-    <div class="boat-container">
-      <div class="boat-details" >
-        <div class="boat-images">
-          <%= image_tag "https://plus.unsplash.com/premium_photo-1661889213741-64b118b28c5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80", size: "800x600" %>
-        </div>
-        <div class="card">
-        <div class="card-body">
-        <h1 class="card-title"><%= @boat.name %></h1>
-        <p class="card-text"><%= @boat.description %></p>
-        <div class="boat-price" style="display: flex; justify-content: flex-end;">
-        <span class="price"><%= number_to_currency(@boat.price) %></span>
-      </div>
+<div class="container-boat">
+  <div class="card-boat">
+    <div class="boat-images">
+      <%= image_tag "https://plus.unsplash.com/premium_photo-1661889213741-64b118b28c5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80", size: "800x600" %>
     </div>
+    <div class="boat-details">
+      <h4><%= @boat.name %></h4>
+      <p><%= @boat.description %></p>
+      <span class="price"><%= number_to_currency(@boat.price) %></span>
   </div>
-</div>
-    </div>
+  <div class="card-booking">
   </div>
 </div>
