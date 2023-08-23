@@ -1,21 +1,17 @@
-<div class="page-container"> <!-- change to global container -->
-  <div class="container">
-    <div class="boat-container">
-      <h1>Boats</h1>
-      <div class="boat-grid">
-        <% @boats.each do |boat| %>
-          <%= link_to boat, class: "boat-card" do %>
-            <div class="boat-image">
-              <%= image_tag "https://plus.unsplash.com/premium_photo-1661889213741-64b118b28c5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80", size: "300x200" %>
-            </div>
-            <div class="boat-details">
-              <h4><%= boat.name %></h4>
-              <p><%= boat.description %></p>
-              <span class="price"><%= "$#{boat.price}" %></span>
-            </div>
-          <% end %>
-        <% end %>
-      </div>
-    </div>
+<div class="container">
+  <h1>Boats</h1>
+  <div class="boat-grid">
+    <% @boats.each do |boat| %>
+      <%= link_to boat, class: "boat-card" do %>
+        <div class="boat-image">
+          <%= image_tag "https://plus.unsplash.com/premium_photo-1661889213741-64b118b28c5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80", size: "300x200" %>
+        </div>
+        <div class="boat-details">
+          <h4><%= boat.name %></h4>
+          <p><%= boat.description %></p>
+          <span class="price"><%= "$#{boat.price}" %></span>
+        </div>
+      <% end %>
+    <% end %>
   </div>
 </div>
