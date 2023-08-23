@@ -1,1 +1,15 @@
-<h1>New Booking! wuu</h1>
+<div style="width: 900px; margin: 0 auto;"> <!-- change to global container -->
+  <div class="booking-container">
+    <h2><%= @boat.name %></h2>
+    <p><%= @boat.description %></p>
+    <%= simple_form_for(@booking) do |f| %>
+      <%= f.input :arrival %>
+      <%= f.input :departure %>
+      <%= f.input :comment %>
+      <div class="form-group" style="display: flex;">
+        <%= f.button :submit, "Confirm", class: "button m-3" %>
+        <%= link_to "Quit", boat_path(@boat), class: "button m-3 btn-login" %> <!-- style this sucka -->
+      </div>
+    <% end %>
+  </div>
+</div>
