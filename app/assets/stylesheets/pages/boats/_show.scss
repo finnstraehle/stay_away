@@ -1,6 +1,43 @@
-.container-boat {
+.container-boat-show {
   display: flex;
   justify-content: space-between;
-  width: 1200px;
-  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.container-boat-show .card-boat {
+  width: 820px; // make responsive
+}
+
+.crew-members {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  margin: 20px auto;
+}
+
+.crew-members .card-member {
+  margin-bottom: 10px;
+  height: 70px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 10px;
+  .name {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+  }
+  .description {
+    font-size: 12px;
+    font-weight: 400;
+  }
+}
+
+.container-boat-show .card-booking {
+  width: 300px;
+  height: 150px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
 }

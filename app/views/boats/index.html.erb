@@ -1,15 +1,18 @@
-<div class="container">
+<div class="container-big">
   <h1>Boats</h1>
   <div class="grid-boats">
     <% @boats.each do |boat| %>
       <%= link_to boat, class: "card-boat" do %>
         <div class="boat-image">
-          <%= image_tag "https://plus.unsplash.com/premium_photo-1661889213741-64b118b28c5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80", size: "300x200" %>
+          <%= image_tag "https://plus.unsplash.com/premium_photo-1661889213741-64b118b28c5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80", width: "100%" %>
         </div>
-        <div class="boat-details">
+        <div class="boat-infos">
           <h4><%= boat.name %></h4>
           <p><%= boat.description %></p>
-          <span class="price"><%= "$#{boat.price}" %></span>
+          <div class="boat-details">
+            <p><%= boat.guests %> Guests</p>
+            <span><%= "$#{boat.price}" %> / week</span>
+          </div>
         </div>
       <% end %>
     <% end %>

@@ -5,6 +5,7 @@ class BoatsController < ApplicationController
 
   def show
     @boat = Boat.find(params[:id])
+    @crew_members = CrewMember.where(boat: @boat)
   end
 
   def new
