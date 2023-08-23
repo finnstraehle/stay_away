@@ -1,17 +1,18 @@
 footer {
-  background-color: $dark-purple;
+  background-color: white;
   width: 100%;
-  color: #fff;
+  color: black;
 }
 
 footer .footer-container {
   padding: 20px 80px;
+  text-align: center;
 }
 
 footer .footer-container p {
   font-size: 12px;
   margin-bottom: 0;
-  color: #fff;
+  color: black;
 }
 
 .body-container {
