@@ -11,16 +11,16 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
-          <%# <li class="nav-item active">
+          <li class="nav-item active">
             <%= link_to "HOME", "#", class: "nav-link" %>
-          <%# </li> %>
+          </li>
           <li class="nav-item dropdown">
             <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "DASHBOARD", "#", class: "dropdown-item" %>
-              <%= link_to "BOOKINGS", "#", class: "nav-link" %>
-              <%= link_to "FAVOURITES", "#", class: "dropdown-item" %>
-              <%= link_to "LOG OUT", "#", class: "dropdown-item", data: {turbo_method: :delete} %>
+              <%= link_to "DASHBOARD", "dashboard_path", class: "dropdown-item" %>
+              <%= link_to "BOOKINGS", "bookings_path", class: "nav-link" %>
+              <%= link_to "WISHLIST", "wishlist_path", class: "dropdown-item" %>
+              <%= link_to "LOG OUT", "users/sign_out_path", class: "dropdown-item", data: {turbo_method: :delete} %>
             </div>
           </li>
         <% else %>
