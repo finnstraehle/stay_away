@@ -1,27 +1,33 @@
-<h1>Dashboard</h1>
-<div class="dashboard-grid">
-  <div class="dashboard-card">
-    <%= link_to "Wishlist", wishlist_path %>
-    <p>Edit your profile</p>
-  </div>
-  <div class="dashboard-card">
-    <%= link_to "Bookings", bookings_path %>
-    <p>Edit your profile</p>
-  </div>
-  <div class="dashboard-card">
-    <%= link_to "Listings", listings_path %>
-    <p>Edit your profile</p>
-  </div>
-  <div class="dashboard-card">
-    <%= link_to "Profile", edit_user_registration_path(3) %> <!-- change to logged in user -->
-    <p>Edit your profile</p>
-  </div>
-  <div class="dashboard-card">
-    <%= link_to "Messages", messages_path %>
-    <p>Edit your profile</p>
-  </div>
-  <div class="dashboard-card">
-    <%= link_to "Payment Methods", payment_methods_path %>
-    <p>Edit your profile</p>
+<div class="page-container">
+  <div class="container">
+    <div class="dashboard-container">
+      <h1>Dashboard</h1>
+      <div class="dashboard-grid">
+        <%= link_to wishlist_path, class: "dashboard-card dashboard-button" do %>
+          <h4>Wishlist</h4>
+          <p>See your wishlist</p>
+        <% end %>
+        <%= link_to bookings_path, class: "dashboard-card dashboard-button" do %>
+          <h4>Bookings</h4>
+          <p>See all your bookings</p>
+        <% end %>
+        <%= link_to listings_path, class: "dashboard-card dashboard-button" do %>
+          <h4>Listings</h4>
+          <p>See all your listings</p>
+        <% end %>
+        <%= link_to edit_user_registration_path(3), class: "dashboard-card dashboard-button" do %>
+          <h4>Profile</h4>
+          <p>Edit your profile</p>
+        <% end %> <!-- change to logged in user -->
+        <%= link_to messages_path, class: "dashboard-card dashboard-button" do %>
+          <h4>Messages</h4>
+          <p>See your messages</p>
+        <% end %>
+        <%= link_to payment_methods_path, class: "dashboard-card dashboard-button" do %>
+          <h4>Payment Methods</h4>
+          <p>See your payment methods</p>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>

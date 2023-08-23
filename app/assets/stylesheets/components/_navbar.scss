@@ -16,14 +16,14 @@
 
 .nav-item {
   margin-right: 20px;
-}
-
-.nav-item a {
+  a {
   color: $dark-purple !important;
   font-weight: bold;
+     &:hover {
+       color: #fff !important;
+       text-decoration: none;
+    }
+  }
 }
 
-.nav-item a:hover {
-  color: #fff !important;
-  text-decoration: none;
-}
+

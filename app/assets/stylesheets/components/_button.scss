@@ -2,18 +2,17 @@
   // width: 180px;
   // height: 72px;
   border-radius: 10px;
-  background-color: $light-yellow;
+  background-color: $light-yellow !important;
   border: none;
-  color: $dark-purple;
+  color: $dark-purple !important;
   font-size: 14px;
   font-weight: 600;
   // padding: 15px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-}
-
-.button:hover {
-  background-color: $dark-yellow;
-  color: $dark-purple;
+  &:hover {
+    background-color: $dark-yellow !important;
+    color: $dark-purple !important;
+  }
 }
