@@ -1,68 +1,70 @@
-.page-center {
-  margin: 0 auto;
-  max-width: 540px;
-}
+// .page-center {
+//   margin: 0 auto;
+//   max-width: 540px;
+// }
 
 .page-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  // align-items: center;
   justify-content: center;
   margin: 50px 0;
+  margin: 0 auto;
+  max-width: 540px;
 }
 
-.form-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 540px;
-  padding: 30px;
-  background-color: #fff;
-  // background-image: linear-gradient(to right, #FFEA9F, #A9DDDA);
-  border-radius: 10px;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-}
+// .form-container {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   height: 540px;
+//   padding: 30px;
+//   background-color: #fff;
+//   // background-image: linear-gradient(to right, #FFEA9F, #A9DDDA);
+//   border-radius: 10px;
+//   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+// }
 
-.button {
-  display: inline-block;
-  font-size: 14px;
-  font-weight: 600;
-  text-align: center;
-  text-decoration: none;
-  color: #FFEA9F !important;
-  background-color: #2E1760 !important;
-  border: 1px solid transparent;
-  border-radius: 20px;
-  width: 100%;
-}
+// .button {
+//   display: inline-block;
+//   font-size: 14px;
+//   font-weight: 600;
+//   text-align: center;
+//   text-decoration: none;
+//   color: #FFEA9F !important;
+//   background-color: #2E1760 !important;
+//   border: 1px solid transparent;
+//   border-radius: 20px;
+//   width: 100%;
+// }
 
-.button:hover {
-  color: #2E1760 !important;
-  background-color: #FFEA9F !important;
-  border: 1px solid #2E1760;
-}
+// .button:hover {
+//   color: #2E1760 !important;
+//   background-color: #FFEA9F !important;
+//   border: 1px solid #2E1760;
+// }
 
-.btn-login {
-  color: #2E1760 !important;
-  background-color: #FFEA9F !important;
-  border: 1px solid #2E1760;
-}
+// .btn-login {
+//   color: #2E1760 !important;
+//   background-color: #FFEA9F !important;
+//   border: 1px solid #2E1760;
+// }
 
-.shared-links {
-  color: #2E1760;
-  text-decoration: none;
-}
+// .shared-links {
+//   color: #2E1760;
+//   text-decoration: none;
+// }
 
-.shared-links:hover {
-  color: #552bb1;
-}
+// .shared-links:hover {
+//   color: #552bb1;
+// }
 
-.form-header {
-  font-family: 'Gloock', serif;
-  font-size: 36px;
-  font-weight: 600;
-  color: #2E1760;
-}
+// .form-header {
+//   font-family: 'Gloock', serif;
+//   font-size: 36px;
+//   font-weight: 600;
+//   color: #2E1760;
+// }
 
 .display-none {
   display: none;

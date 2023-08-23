@@ -19,10 +19,10 @@ puts 'Creating users...'
 end
 
 puts 'Creating boats...'
-20.times do
+50.times do
   Boat.create!(
     name: Faker::TvShows::RuPaul.queen,
-    description: Faker::Lorem.paragraph(sentence_count: 7),
+    description: Faker::Lorem.paragraph(sentence_count: 10),
     price: rand(249..10_459),
     guests: rand(1..15),
     location: Faker::Address.city,
@@ -37,7 +37,8 @@ puts 'Creating bookings...'
     arrival: Faker::Date.between(from: 200.days.ago, to: Date.today),
     departure: Faker::Date.between(from: Date.today, to: 200.days.from_now),
     boat: Boat.all.sample,
-    user: User.all.sample
+    user: User.all.sample,
+    comment: Faker::Lorem.paragraph(sentence_count: 6)
   )
 end
 
