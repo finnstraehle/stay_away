@@ -1,7 +1,7 @@
 // Specific CSS for your home-page
 .homepage {
   width: 100%;
-  color: #2E1760;
+  color: $dark-purple;
   text-align: center;
 }
 
@@ -10,21 +10,29 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  // height: 550px;
-  height: 400px;
-  padding: 20px;
+  height: 80vh;
   background-image: asset-url("sea_sunset2.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.homepage .home-container .homepage-logo {
-  width: 400px;
-  align-self: center;
-  filter: drop-shadow(1px 1px 2px #5959592e);
-}
+// .homepage .home-container .homepage-logo {
+//   width: 400px;
+//   align-self: center;
+//   filter: drop-shadow(1px 1px 2px #5959592e);
+// }
 
 .search-box {
-  margin-top: 40px;
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 100%;
+}
+
+.form-container {
+  padding: 20px 0;
+  margin-top: 20px;
+}
+
+footer {
+  height: 10vh;
 }
