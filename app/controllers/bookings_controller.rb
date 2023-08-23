@@ -8,12 +8,14 @@ class BookingsController < ApplicationController
   end
 
   def new
-    @booking = Booking.new
     @boat = Boat.all[2] # change to params[:boat_id]
+    @booking = Booking.new
   end
 
   def create
     @booking = Booking.new(booking_params)
+    @booking.boat = Boat.all[2] # change to params[:boat_id]
+    @booking.user = current_user
 
     @booking.save
     redirect_to booking_path(@booking)
@@ -34,12 +36,12 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
     @booking.destroy
 
-    redirect_to bookings_path
+    redirect_to boats_path
   end
 
   private
 
   def booking_params
-    params.require(:booking).permit(:start_date, :end_date, :boat_id)
+    params.require(:booking).permit(:start_date, :end_date, :comment)
   end
 end

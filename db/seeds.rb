@@ -19,7 +19,7 @@ puts 'Creating users...'
 end
 
 puts 'Creating boats...'
-20.times do
+50.times do
   Boat.create!(
     name: Faker::TvShows::RuPaul.queen,
     description: Faker::Lorem.paragraph(sentence_count: 10),
