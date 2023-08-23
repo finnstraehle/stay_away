@@ -1,28 +1,25 @@
+.listing-container{
+  margin: 0 auto;
+  width: 900px;
+}
+
 .listings{
   max-width: 700px;
   margin: 0 auto;
   padding: 0 16px;
   .listing-card {
-    display: flex;
-    align-items: center;
     margin-bottom: 8px;
     background: white;
     padding: 8px 16px;
     border: 2px solid rgb(235,235,235);
     border-radius: 10px;
-    .listing-card-content {
-      flex-grow: 1;
-      padding: 0 24px;
-    }
-    p {
-      margin: 0;
-      line-height: 1.4;
-    }
-    small {
-      color: rgba(52, 20, 20, 0.69);
-      font-weight: bold;
-      font-size: 20px;
-    }
+    overflow: hidden;
+    height: 120px;
+    background: white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+
     .listing-card-actions {
       opacity: 0;
       display: flex;
@@ -38,6 +35,34 @@
       }
     }
   }
+
+  .listing-card img {
+    height: 100%;
+    width: 130px;
+    object-fit: cover;
+    padding-left: 10px;
+  }
+  .listing-card h2 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+  }
+  .listing-card p {
+    font-size: 12px;
+    line-height: 1.4;
+    opacity: .7;
+    margin-bottom: 0;
+    margin-top: 8px;
+  }
+  .listing-card a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .listing-card .listing-card-content {
+    padding: 16px;
+  }
+
   &:hover .listing-card-actions {
     opacity: 1;
   }
