@@ -29,7 +29,7 @@ class BoatsController < ApplicationController
   def update
     @boat = Boat.find(params[:id])
     if @boat.update(boat_params)
-      redirect_to boats_path
+      redirect_to listings_path
     else
       render :edit
     end
