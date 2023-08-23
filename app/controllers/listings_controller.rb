@@ -7,21 +7,15 @@ class ListingsController < ApplicationController
     @listing = Boat.find(params[:id])
   end
 
-  def new
-    @listing = Boat.new
-  end
-
-  def create
-    @listing = Boat.new(listing_params)
-
-    @listing.save
-    redirect_to listing_path(@listing)
-
+  def destroy
+    @boat = Boat.find(params[:id])
+    @boat.destroy
+    redirect_to listings_path, status: :see_other
   end
 
   private
 
   def listing_params
-    params.require(:boat).permit(:name, :description, :price, :location, :photo)
+    params.require(:boat).permit(:name, :description, :price, :location, :category, :guests)
   end
 end
