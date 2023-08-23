@@ -17,14 +17,14 @@
   margin-right: 20px;
 }
 
-.nav-item a {
-  color: #ffffff;
+.nav-link {
+  color: #2E1760 !important;
   font-weight: 600;
   font-family: 'Montserrat', sans-serif;
 }
 
-.nav-item a:hover {
-  color: #2E1760;
+.nav-link:hover {
+  color: #fff !important;
   text-decoration: none;
   font-family: 'Montserrat', sans-serif;
 }

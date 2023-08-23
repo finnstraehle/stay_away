@@ -2,9 +2,9 @@
   // width: 180px;
   // height: 72px;
   border-radius: 20px;
-  background-color: #FFEA9F;
+  background-color: #FFEA9F !important;
   border: none;
-  color: #2E1760;
+  color: #2E1760 !important;
   font-size: 14px;
   font-weight: 600;
   // padding: 15px;
@@ -14,6 +14,6 @@
 }
 
 .button:hover {
-  background-color: #fcc500;
-  color: #2E1760;
+  background-color: #2E1760  !important;
+  color: #FFEA9F !important;
 }
