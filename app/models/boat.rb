@@ -5,6 +5,6 @@ class Boat < ApplicationRecord
 
   CATEGORIES = ["Sailboat", "Motorboat", "Catamaran", "Yacht", "Pirate Ship", "Cargo Ship", "Inflatable Unicorn"]
 
-  geocoded_by :address
-  after_validation :geocode, if: :will_save_change_to_address?
+  geocoded_by :location
+  after_validation :geocode, if: :will_save_change_to_location?
 end
