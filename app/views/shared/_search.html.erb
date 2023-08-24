@@ -10,3 +10,27 @@
     <% end %>
   </div>
 </div>
+
+<div class="search-form-container">
+  <div class="form-row">
+    <%= form_with url: boats_path, method: :get, class: "d-flex" do %>
+      <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Category",
+            collection: Boat::CATEGORIES
+        %>
+        <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Location"
+        %>
+        <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Guests"
+        %>
+      <%= submit_tag "Search", name: "", class: "button" %>
+    <% end %>
+  </div>
+</div>
