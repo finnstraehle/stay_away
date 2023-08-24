@@ -6,6 +6,9 @@
 
 .container-boat-show .card-boat {
   width: 820px; // make responsive
+  img {
+    border-radius: 10px;
+  }
 }
 
 .crew-members {
