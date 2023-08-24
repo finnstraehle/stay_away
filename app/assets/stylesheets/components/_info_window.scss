@@ -1,5 +1,11 @@
 .map-location {
   display: flex;
   gap: 10px;
-  padding: 10px;
+}
+
+.info-wind-title {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  margin-top: 15px;
 }
