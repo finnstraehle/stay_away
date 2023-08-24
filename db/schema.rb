@@ -102,7 +102,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_24_133720) do
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
-  
+
   create_table "wishlists", force: :cascade do |t|
     t.bigint "boat_id", null: false
     t.bigint "user_id", null: false
