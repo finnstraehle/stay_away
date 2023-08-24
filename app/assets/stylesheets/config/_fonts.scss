@@ -6,13 +6,11 @@
 // Define fonts for body and headers
 $body-font: 'Montserrat', sans-serif;
 $headers-font: 'Quattrocento', serif;
-$headers-color: #2E1760;
-$headers-font-weight: 700;
 
-// h1, h2, h3, h4, h5 {
-//   font-family: 'Quattrocento', serif;
-//   font-weight: $headers-font-weight;
-// }
+h1, h2, h3, h4, h5 {
+  font-family: 'Quattrocento', serif;
+  color: #2E1760 !important;
+}
 
 h6 {
   font-family: 'Montserrat', sans-serif;
@@ -29,7 +27,7 @@ a {
 
 a:hover {
   text-decoration: none;
-  color: #8d6eb7;
+  color: #8d6eb7 !important;
 }
 
 p {
