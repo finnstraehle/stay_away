@@ -61,3 +61,12 @@
     color: $grey;
   }
 }
+
+.show-map-btn {
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  bottom: 1rem;
+  align-self: flex-end;
+  padding-bottom: 50px;
+}

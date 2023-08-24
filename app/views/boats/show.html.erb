@@ -3,8 +3,8 @@
     <div class="card-boat">
       <div class="boat-images">
         <% @boat.photos.each do |photo| %>
-            <%= cl_image_tag photo.key %>
-          <% end %>
+          <%= cl_image_tag photo.key %>
+        <% end %>
       </div>
       <h2><%= @boat.name %></h2>
       <p><%= @boat.description %></p>
@@ -54,4 +54,6 @@
       <%= link_to "BOOK", new_booking_path, class: "button m-3 p-2 btn-login" %>
     </div>
   </div>
-</div
+</div>
+
+
