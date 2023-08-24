@@ -1,13 +1,5 @@
-.listing-container{
-  margin: 0 auto;
-  width: 900px;
-}
 
-.listings{
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 0 16px;
-  .listing-card {
+.listing-card {
     margin-bottom: 8px;
     background: white;
     padding: 8px 16px;
@@ -23,10 +15,10 @@
     .listing-card-actions {
       opacity: 0;
       display: flex;
+      gap: 10px;
       transition: ease .3s;
       a {
         color: rgba(52, 20, 20, 0.69);
-        margin-left: 16px;
         font-size: 14px;
         text-decoration: none;
         &:hover {
@@ -63,7 +55,30 @@
     padding: 16px;
   }
 
-  &:hover .listing-card-actions {
+  .listing-card-actions:hover{
     opacity: 1;
   }
+
+.listing-title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 40px;
+}
+
+.add-btn a {
+    border-radius: 10px;
+    background-color: $light-yellow !important;
+    border: none;
+    color: $dark-purple !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    &:hover {
+      background-color: $dark-yellow !important;
+      color: $dark-purple !important;
+    }
 }

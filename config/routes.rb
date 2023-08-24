@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get "/messages", to: "pages#messages", as: :messages
   get "/payment-methods", to: "pages#payment_methods", as: :payment_methods
 
-  resources :boats, only: %i[index show] do
+  resources :boats, only: %i[index show new create edit update] do
     resources :crew_members
   end
 
