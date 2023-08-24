@@ -1,27 +1,23 @@
 <div class="container">
   <div class="devise-container form-container p-5">
     <h2 class="form-header mb-3">Sign up</h2>
-    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <div class="form-group">
         <%= f.input :first_name,
                     required: false,
                     autofocus: true,
-                    input_html: { autocomplete: "name" } %>
+                    input_html: { autocomplete: "first-name" } %>
         <%= f.input :last_name,
                     required: false,
                     autofocus: true,
-                    input_html: { autocomplete: "surname" } %>
-        <%= f.input :birth_date,
-                    required: false,
-                    autofocus: true,
-                    input_html: { autocomplete: "birth-date" } %>
+                    input_html: { autocomplete: "last-name" } %>
         <%= f.input :email,
                     required: false,
                     autofocus: true,
                     input_html: { autocomplete: "email" } %>
         <%= f.input :password,
                     required: false,
-                    input_html: { autocomplete: "current-password" } %>
+                    input_html: { autocomplete: "new-password" } %>
         <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
       </div>
 
