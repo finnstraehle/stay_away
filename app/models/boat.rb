@@ -4,6 +4,8 @@ class Boat < ApplicationRecord
   has_many :crew_members, dependent: :destroy
   has_many :wishlists, dependent: :destroy
 
+  has_many_attached :photos
+
   CATEGORIES = ["Sailboat", "Motorboat", "Catamaran", "Yacht", "Pirate Ship", "Cargo Ship", "Inflatable Unicorn"]
 
   geocoded_by :location

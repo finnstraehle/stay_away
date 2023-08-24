@@ -8,6 +8,7 @@
         <%= f.input :price %>
         <%= f.input :guests %>
         <%= f.input :location %>
+        <%= f.input :photo, as: :file, input_html: { multiple: true } %> <!-- if just one: wirhout ,input... -->
         <%= f.input :category, label: false, prompt: "Category", collection: Boat::CATEGORIES %>
         <div class="form-group" style="display: flex;">
           <%= f.button :submit, "Confirm", class: "button m-3" %>
