@@ -12,6 +12,8 @@ Rails.application.routes.draw do
 
   resources :listings
 
+  resources :wishlists, only: %i[create destroy]
+
   resources :bookings, only: %i[index show new create destroy] do
     resources :reviews, only: %i[new create]
   end
