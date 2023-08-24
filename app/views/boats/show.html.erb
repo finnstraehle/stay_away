@@ -6,6 +6,8 @@
       </div>
       <h2><%= @boat.name %></h2>
       <p><%= @boat.description %></p>
+      <!-- add Host -->
+      <hr>
       <h3>Crew</h3>
       <div class="crew-members">
         <% @crew_members.each do |member| %>
@@ -15,11 +17,39 @@
           </div>
         <% end %>
       </div>
+      <hr>
+      <h3>Reviews</h3>
+      <div class="reviews">
+        <% @reviews.first(10).each do |review| %>
+            <div class="card-review">
+              <p class="rating">
+                <% review.rating.times do %>
+                  <%= icon('fas', 'star',) %>
+                <% end %>
+              </p>
+              <p class="comment"><%= review.comment %></p>
+            </div>
+          <% end %>
+      </div>
+      <hr>
+      <h3>Location</h3>
+      <div style="width: 100%; height: 600px;"
+        data-controller="map"
+        data-map-markers-value="<%= @markers.to_json %>"
+        data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
     </div>
     <div class="card-booking">
-      <p>Guests: <%= @boat.guests %></p>
-      <span class="price">Price: <%= number_to_currency(@boat.price) %> per week</span>
+      <div class="booking-top">
+        <p><%= @boat.guests %> Guests</p>
+        <p><%= @reviews_average %> <%= icon('far', 'star')%></p>
+      </div>
+      <span class="price"><%= number_to_currency(@boat.price) %> / week</span>
+      <%= simple_form_for(@booking) do |f| %>
+      <%= f.input :arrival %>
+      <%= f.input :departure %>
+    <% end %>
       <%= link_to "BOOK", new_booking_path, class: "button m-3 p-2 btn-login" %>
     </div>
   </div>
-</div>
+</div
