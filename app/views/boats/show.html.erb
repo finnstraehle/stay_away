@@ -2,7 +2,7 @@
   <div class="container-boat-show">
     <div class="card-boat">
       <div class="boat-images">
-        <%= image_tag "https://plus.unsplash.com/premium_photo-1661889213741-64b118b28c5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80", width: "100%" %>
+        <%= image_tag "https://plus.unsplash.com/premium_photo-1661889213741-64b118b28c5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80", width: "100%", class: "boat-img" %>
       </div>
       <h2><%= @boat.name %></h2>
       <p><%= @boat.description %></p>
@@ -52,4 +52,6 @@
       <%= link_to "BOOK", new_booking_path, class: "button m-3 p-2 btn-login" %>
     </div>
   </div>
-</div
+</div>
+
+
