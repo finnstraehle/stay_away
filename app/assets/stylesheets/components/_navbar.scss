@@ -2,7 +2,7 @@
   justify-content: space-between;
   background-image: linear-gradient(to right, $light-yellow, $light-blue);
   padding: 5px 50px 5px 50px;
-  height: 10vh;
+  height: 78px;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -21,7 +21,7 @@
   font-weight: bold;
   font-size: 14px;
     &:hover {
-      color: $light-purple !important;
+      color: $extra-light-purple !important;
       text-decoration: none;
     }
   }
@@ -32,8 +32,7 @@
   font-weight: bold;
   font-size: 14px;
     &:hover {
-      color: #5E3D8C !important;
+      color: $extra-light-purple !important;
       text-decoration: none;
-      background-color: $light-yellow !important;
     }
 }
