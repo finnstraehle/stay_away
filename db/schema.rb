@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_23_192907) do
+ActiveRecord::Schema[7.0].define(version: 2023_08_24_131917) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -75,9 +75,20 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_23_192907) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "wishlists", force: :cascade do |t|
+    t.bigint "boat_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["boat_id"], name: "index_wishlists_on_boat_id"
+    t.index ["user_id"], name: "index_wishlists_on_user_id"
+  end
+
   add_foreign_key "boats", "users"
   add_foreign_key "bookings", "boats"
   add_foreign_key "bookings", "users"
   add_foreign_key "crew_members", "boats"
   add_foreign_key "reviews", "bookings"
+  add_foreign_key "wishlists", "boats"
+  add_foreign_key "wishlists", "users"
 end

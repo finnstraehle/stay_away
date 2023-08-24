@@ -8,7 +8,17 @@ class BoatsController < ApplicationController
       {
         lat: boat.latitude,
         lng: boat.longitude,
-        info_window_html: render_to_string(partial: "info_window", locals: {boat: boat}),
+        info_window_html: render_to_string(
+          partial: "info_window",
+          locals: {
+            boat: boat,
+            reviews_average: if Review.where(booking: Booking.where(boat: boat)).empty?
+                               "no reviews"
+                             else
+                               Review.where(booking: Booking.where(boat: boat)).average(:rating).round(2)
+                             end
+          }
+        ),
         marker_html: render_to_string(partial: "marker")
       }
     end
@@ -20,7 +30,9 @@ class BoatsController < ApplicationController
     @booking = Booking.new
     @booking_of_boat = Booking.where(boat: @boat)
     @reviews = Review.where(booking: @booking_of_boat)
-    @reviews_average = @reviews.average(:rating).round(2)
+    @reviews_average = @reviews.average(:rating).round(2) if @reviews.empty? == false
+    @reviews_average = "no reviews" if @reviews.empty?
+    @reviews_count = @reviews.count
   end
 
   def new
