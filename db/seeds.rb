@@ -1,4 +1,5 @@
 require 'faker'
+require 'open-uri'
 
 puts 'Cleaning database...'
 Boat.destroy_all
@@ -20,16 +21,19 @@ end
 
 puts 'Creating boats...'
 User.all.each do |user|
-  rand(0..10).times do
-    Boat.create!(
+  rand(0..4).times do
+    boat = Boat.new(
       name: Faker::TvShows::RuPaul.queen,
       description: Faker::Lorem.paragraph(sentence_count: 10),
       price: rand(249..10_459),
       guests: rand(1..15),
       location: Faker::Address.city,
       user: user,
-      category: Boat::CATEGORIES.sample
+      category: Boat::CATEGORIES.sample,
     )
+    file = URI.open('https://source.unsplash.com/1600x900/?boat')
+    boat.photos.attach(io: file, filename: boat.name.to_s, content_type: 'image/png')
+    boat.save!
   end
 end
 
