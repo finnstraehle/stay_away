@@ -1,6 +1,12 @@
 <div class="container">
   <div class="booking-container">
-    <h2><%= @boat.name %></h2>
+    <div class="booking-header">
+      <h2><%= @boat.name %></h2>
+      <div class="items-right">
+        <p><%= @boat.guests %> Guests</p>
+        <p><%= @reviews_average %> <%= icon('far', 'star')%></p>
+      </div>
+    </div>
     <p><%= @boat.description %></p>
     <%= simple_form_for(@booking) do |f| %>
       <%= f.input :arrival %>
@@ -8,7 +14,6 @@
       <%= f.input :comment %>
       <div class="form-group" style="display: flex;">
         <%= f.button :submit, "Confirm", class: "button m-3" %>
-        <%= link_to "Quit", boat_path(@boat), class: "button m-3 p-2 btn-login" %> <!-- style this sucka -->
       </div>
     <% end %>
   </div>

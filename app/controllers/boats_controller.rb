@@ -20,7 +20,9 @@ class BoatsController < ApplicationController
     @booking = Booking.new
     @booking_of_boat = Booking.where(boat: @boat)
     @reviews = Review.where(booking: @booking_of_boat)
-    @reviews_average = @reviews.average(:rating).round(2)
+    @reviews_average = @reviews.average(:rating).round(2) if @reviews.empty? == false
+    @reviews_average = "no reviews" if @reviews.empty?
+    @reviews_count = @reviews.count
   end
 
   def new
