@@ -2,40 +2,59 @@
 .listing-card {
     margin-bottom: 8px;
     background: white;
-    padding: 8px 16px;
+    //padding: 8px 16px;
     border: 2px solid rgb(235,235,235);
     border-radius: 10px;
     overflow: hidden;
     height: 120px;
-    background: white;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
     display: flex;
     align-items: center;
 
-    .listing-card-actions {
-      opacity: 0;
-      display: flex;
-      gap: 10px;
-      transition: ease .3s;
-      a {
-        color: rgba(52, 20, 20, 0.69);
-        font-size: 14px;
-        text-decoration: none;
-        &:hover {
-          color: rgba(52, 20, 20, 1);
-        }
-      }
-    }
+  }
+
+  .listing-card-actions {
+    padding-left: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .listing-card .delete-icon {
+    opacity: 0;
+    font-size: 14px;
+    padding: 5px;
+  }
+
+  .listing-card:hover .delete-icon {
+    display: block;
+    opacity: 1;
+  }
+
+  .listing-card .edit-icon {
+    opacity: 0;
+    font-size: 14px;
+    padding: 5px;
+  }
+
+  .listing-card:hover .edit-icon {
+    display: block;
+    opacity: 1;
+  }
+
+  .listing-image {
+    width: 130px;
+    height: 120px;
   }
 
   .listing-card img {
     height: 100%;
     width: 130px;
     object-fit: cover;
-    padding-left: 10px;
+    border-radius: 5px;
   }
   .listing-card h2 {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
     margin: 0;
   }
@@ -55,9 +74,12 @@
     padding: 16px;
   }
 
-  .listing-card-actions:hover{
-    opacity: 1;
+  .listing-card-content{
+    display: flex;
+    align-items: center;
+    height: 100px;
   }
+
 
 .listing-title-container {
   display: flex;
