@@ -8,18 +8,22 @@
   width: 820px; // make responsive
   img {
     border-radius: 10px;
+    height: 500px;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 30px;
   }
 }
 
-.crew-members {
+.card-boat .crew-members {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 20px;
+  grid-gap: 40px 20px;
   margin: 20px auto;
 }
 
 .crew-members .card-member {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   height: 70px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -35,12 +39,51 @@
   }
 }
 
-.container-boat-show .card-booking {
-  width: 300px;
+.card-boat .reviews {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px 20px;
+  margin: 20px auto;
+}
+
+.reviews .card-review {
+  margin-bottom: 5px;
   height: 150px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  .rating {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: $extra-light-purple;
+  }
+  .comment {
+    font-size: 12px;
+    font-weight: 400;
+  }
+}
+
+.container-boat-show .card-booking {
+  position: sticky;
+  top: 90px;
+  width: 300px;
+  height: 500px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   padding: 20px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  .booking-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  span {
+    font-size: 21px;
+    font-weight: 600;
+    color: $dark-purple;
+  }
 }

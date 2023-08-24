@@ -15,6 +15,10 @@ class BoatsController < ApplicationController
   def show
     @boat = Boat.find(params[:id])
     @crew_members = CrewMember.where(boat: @boat)
+    @booking = Booking.new
+    @booking_of_boat = Booking.where(boat: @boat)
+    @reviews = Review.where(booking: @booking_of_boat)
+    @reviews_average = @reviews.average(:rating).round(2)
   end
 
   def new
