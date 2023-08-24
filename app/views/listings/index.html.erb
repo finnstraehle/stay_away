@@ -3,21 +3,22 @@
     <h1>My Listings (<%= @listings.length %>)</h1>
     <div class="add-btn"><%= link_to "+ add listing", new_boat_path%>
     </div>
-    </div>
+  </div>
   <% @listings.each do |listing| %>
     <div class="listing-card">
         <%= link_to listing do %>
-          <img src="https://cdn.boatinternational.com/convert/files/2021/08/205638c0-f3af-11eb-90e4-c9a223ff72d4-Somnio-hero.jpg/r%5Bwidth%5D=1920/205638c0-f3af-11eb-90e4-c9a223ff72d4-Somnio-hero.jpg">
+          <div class="listing-image">
+            <img src="https://media.fraseryachts.com/Yachts/Y599_KrB_MC/images/website/001B_BABA%27S_profile-ShBwo3Fc.jpg">
+          </div>
           <div class="listing-card-content">
             <h2><small><%= listing.name %></small></h2>
-             <p><%= listing.description %></p>
-             <div class="listing-card-actions">
-                <%= link_to "Edit", edit_boat_path(listing) %> <!-- change -->
-                <%= link_to "Delete", listing_path(listing), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+            <p><%= truncate(listing.description, length: 300) %></p>
+            <div class="listing-card-actions">
+              <a href="<%= edit_boat_path(listing) %>" class="edit-icon"><i class="fa-solid fa-pen-to-square"></i></a>
+              <a href="<%=listing_path(listing)%>" data-turbo-method="delete" data-turbo-confirm="Are you sure?" class="delete-icon"><i class="fa-solid fa-trash"></i></a>
             </div>
             <% end %>
-
           </div>
-        </div>
+      </div>
     <% end %>
   </div>
