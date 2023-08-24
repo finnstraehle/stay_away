@@ -24,15 +24,15 @@
                   input_html: { autocomplete: "current-password" } %>
     </div>
 
-    <div class="form-actions">
-      <%= f.button :submit, "Update" %>
+    <div class="form-actions centered">
+      <%= f.button :submit, "Update", class: "button mb-3" %>
     </div>
   <% end %>
 
-  <h3>Cancel my account</h3>
+  <h5>It'd be sad to see you go...</h5>
 
-  <div>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete %></div>
+  <div><%= link_to "Cancel my account", registration_path(resource_name), class: "button-white mb-3", data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete %></div>
 
-  <%= link_to "Back", :back %>
+  <%= link_to "Back", :back , class: "shared-links" %>
 
 </div>

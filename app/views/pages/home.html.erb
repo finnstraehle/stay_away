@@ -7,7 +7,12 @@
       </div>
     </div>
   </div>
-  <div class="container-big">
+  <div class="boats-down">
+    <button class="boats-down-button" onClick="document.getElementById('boat-home-list').scrollIntoView();" >
+    <h3>See our boats</h3>
+    <i class="fa-solid fa-angles-down"></i></button>
+  </div>
+  <div class="container-big" id="boat-home-list">
     <div class="grid-boats">
       <% @boats = Boat.all %>
       <% @boats.each do |boat| %>
