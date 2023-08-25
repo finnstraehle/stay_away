@@ -1,21 +1,9 @@
-.form-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 10px;
-}
+.form-row {
+  margin: 0 100px;
 
-.search-form-container {
-  padding: 20px 80px;
-}
-
-.form-control {
-  border-radius: 10px !important;
-}
-
-.form-select {
-  border-radius: 10px !important;
-}
-
-.form-grid .button {
-  padding: 0;
-}
+  .input-box {
+    position: relative;
+    width: 100%;
+    margin: 10px 0 50px 0;
+    }
+  }

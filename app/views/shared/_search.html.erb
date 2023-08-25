@@ -1,36 +1,24 @@
 <div class="search-form-container">
   <div class="form-row">
-    <%= simple_form_for(@boat) do |f| %>
-      <div class="form-grid">
-        <%= f.input :category, label: false, prompt: "Category", collection: Boat::CATEGORIES %>
-        <%= f.input :location, label: false, placeholder: "Location" %>
-        <%= f.input :guests, label: false, placeholder: "Guests" %>
-        <%= f.submit :button, class: "mb-3 button", value: "Search" %>   <!-- change that it links to boats/index -->
-      </div>
-    <% end %>
-  </div>
-</div>
-
-<div class="search-form-container">
-  <div class="form-row">
-    <%= form_with url: boats_path, method: :get, class: "d-flex" do %>
-      <%= text_field_tag :query,
-            params[:query],
-            class: "form-control",
-            placeholder: "Category",
-            collection: Boat::CATEGORIES
+    <%= form_with url: boats_path, method: :get, class: "d-flex gap-2" do %>
+      <%= select_tag :query,
+            options_for_select(Boat::CATEGORIES, params[:query]),
+            { include_blank: "Category", class: "form-select input-box", required: true }
         %>
-        <%= text_field_tag :query,
-            params[:query],
-            class: "form-control",
-            placeholder: "Location"
+        <%= text_field_tag :location,
+            params[:location],
+            class: "form-control input-box",
+            placeholder: "Location",
+            required: true
         %>
-        <%= text_field_tag :query,
-            params[:query],
-            class: "form-control",
-            placeholder: "Guests"
+        <%= number_field_tag :guests,
+            params[:guests],
+            class: "form-control input-box",
+            placeholder: "Guests", 
+            min: 1,
+            required: true
         %>
-      <%= submit_tag "Search", name: "", class: "button" %>
+      <%= submit_tag "Search", name: "", class: "button input-box" %>
     <% end %>
   </div>
 </div>
