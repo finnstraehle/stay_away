@@ -119,6 +119,6 @@ class BoatsController < ApplicationController
   end
 
   def guests_range
-    ((@guests - 1)..(@guests + 2))
+    ((@guests)..(@guests + 2))
   end
 end

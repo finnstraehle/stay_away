@@ -122,4 +122,3 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_24_133720) do
   add_foreign_key "wishlists", "boats"
   add_foreign_key "wishlists", "users"
 end
-
