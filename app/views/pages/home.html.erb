@@ -18,10 +18,11 @@
       <% @boats.each do |boat| %>
         <%= link_to boat, class: "card-boat" do %>
           <div class="boat-image">
-          <% boat.photos.each do |photo| %>
-            <%= cl_image_tag photo.key %>
-          <% end %>
-        </div>
+            <% boat.photos.each do |photo| %>
+              <%= cl_image_tag photo.key %>
+            <% end %>
+          </div>
+          <div class="star-icon"><%= icon('fas', 'star',) %></div>
           <div class="boat-infos">
             <h4><%= boat.name %></h4>
             <p><%= boat.description %></p>
