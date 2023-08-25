@@ -1,24 +1,25 @@
 class BookingsController < ApplicationController
   def index
-    @bookings = Booking.all
+    @bookings = Booking.where(user: current_user)
+    @received_bookings = Booking.joins(:boat).where(boats: { user: current_user })
   end
 
   def show
-    @booking = Booking.find(params[:id])
+    @received_bookings = Booking.find(params[:id])
   end
 
   def new
-    @boat = Boat.all[2] # change to params[:boat_id]
+    @boat = Boat.find(params[:boat_id])
     @booking = Booking.new
   end
 
   def create
     @booking = Booking.new(booking_params)
-    @booking.boat = Boat.all[2] # change to params[:boat_id]
+    @boat = Boat.find(params[:boat_id])
+    @booking.boat = @boat
     @booking.user = current_user
-
     @booking.save
-    redirect_to booking_path(@booking)
+    redirect_to bookings_path
   end
 
   def edit
@@ -39,9 +40,23 @@ class BookingsController < ApplicationController
     redirect_to boats_path
   end
 
+  def accept
+    @booking = Booking.find(params[:id])
+    @booking.status = "accepted"
+    @booking.save
+    redirect_to bookings_path
+  end
+
+  def reject
+    @booking = Booking.find(params[:id])
+    @booking.status = "rejected"
+    @booking.save
+    redirect_to bookings_path
+  end
+
   private
 
   def booking_params
-    params.require(:booking).permit(:start_date, :end_date, :comment)
+    params.require(:booking).permit(:start_date, :end_date, :comment, :boat_id, :user_id)
   end
 end
