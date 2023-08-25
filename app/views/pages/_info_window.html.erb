@@ -1,0 +1,12 @@
+<img style="width: 200px; border-top-left-radius: 10px; border-top-right-radius: 10px;" src="https://www.flyingcharter.it/wp-content/uploads/2023/05/flying-charter-yacht.jpg">
+<div class="info-wind-container">
+  <div class="info-wind-title"><h6><%= boat.name %></h6></div>
+    <div class="map-location">
+      <p><i class="fa-solid fa-location-dot"></i></p><p><%= boat.location %></p>
+    </div>
+    <p style="font-size: 15px; font-weight: 600; color: #2E1760;"><%= "$#{boat.price}" %> / week</p>
+    <div class="info-wind-btm">
+      <p><%= boat.guests %> Guests</p>
+      <p style="margin-right: 10px;"><%= reviews_average %> <%= icon('far', 'star')%></p>
+    </div>
+</div>

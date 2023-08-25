@@ -1,3 +1,5 @@
+require 'open-uri'
+
 class UsersController < ApplicationController
   def index
     @users = User.all
@@ -12,8 +14,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(user_params)
-
+    @user = User.new(user_params) 
     @user.save
     redirect_to user_path(@user)
   end
@@ -39,6 +40,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :email)
+    params.require(:user).permit(:first_name, :email, :last_name, :password,)
   end
 end

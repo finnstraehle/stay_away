@@ -8,7 +8,7 @@
     <div class="listing-card">
         <%= link_to listing do %>
           <div class="listing-image">
-            <img src="https://media.fraseryachts.com/Yachts/Y599_KrB_MC/images/website/001B_BABA%27S_profile-ShBwo3Fc.jpg">
+            <%= cl_image_tag listing.photos.last.key %>
           </div>
           <div class="listing-card-content">
             <div class="text">
