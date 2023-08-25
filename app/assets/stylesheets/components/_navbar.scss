@@ -4,16 +4,13 @@
   padding: 5px 50px 5px 50px;
   height: 78px;
 }
-
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
-
 .navbar-lewagon .navbar-brand img {
   width: 150px;
   margin-left: 20px;
 }
-
 .nav-item {
   margin-right: 20px;
   a {
@@ -27,6 +24,7 @@
       }
   }
 }
+
 
 .nav-circle-link {
   a {
@@ -47,12 +45,10 @@
       }
   }
 }
-
 .avatar {
   width: 50px;
   height: 50px;
 }
-
 .navbar .nav-link {
   text-align: center;
   display: flex;
@@ -60,15 +56,12 @@
   justify-content: center;
   align-items: center;
 }
-
 .navlink i {
   align-self: center;
 }
-
 .nav-item .dropdown {
   margin-right: 0;
 }
-
 .navbar-btn {
   filter: grayscale(100%);
   background-color: transparent;
@@ -82,19 +75,16 @@
   border: none;
   background-color: rgba(255, 255, 255, 0.5);
 }
-
 .navbar-btn:hover {
   filter: none;
   outline: 2px solid #fff;
   margin: 0;
   padding: 0;
 }
-
 .navbar-btn:active {
   filter: none;
   outline: 2px solid #fff;
 }
-
 .dropdown-menu {
   border-radius: 5px !important;
   box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
@@ -111,7 +101,6 @@
     }
   }
 }
-
 .nav-line {
   width: 100%;
   border-top: 1px solid rgb(214, 214, 214);

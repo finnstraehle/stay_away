@@ -24,7 +24,7 @@ end
 
 puts 'Creating boats...'
 User.all.each do |user|
-  rand(0..4).times do
+  rand(0..3).times do
     boat = Boat.new(
       name: Faker::TvShows::RuPaul.queen,
       description: Faker::Lorem.paragraph_by_chars(number: 200),
@@ -32,7 +32,7 @@ User.all.each do |user|
       guests: rand(1..15),
       location: Faker::Address.city,
       user: user,
-      category: Boat::CATEGORIES.sample,
+      category: Boat::CATEGORIES.sample
     )
     file = URI.open('https://source.unsplash.com/1600x900/?boat')
     boat.photos.attach(io: file, filename: boat.name.to_s, content_type: 'image/png')
@@ -42,7 +42,7 @@ end
 
 puts 'Creating bookings...'
 Boat.all.each do |boat|
-  rand(2..10).times do
+  rand(1..3).times do
     Booking.create!(
       arrival: Faker::Date.between(from: 200.days.ago, to: Date.today),
       departure: Faker::Date.between(from: Date.today, to: 200.days.from_now),

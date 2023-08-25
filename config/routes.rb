@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get "/messages", to: "pages#messages", as: :messages
   get "/payment-methods", to: "pages#payment_methods", as: :payment_methods
   get "/boats/map", to: "boats#map", as: :map
+  get "/map", to: "pages#map", as: :home_map
   patch "/bookings/:id/accept", to: "bookings#accept", as: "accept"
   patch "/bookings/:id/reject", to: "bookings#reject", as: "reject"
 
