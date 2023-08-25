@@ -11,17 +11,17 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
-          <li class="nav-item active">
+          <li class="nav-item nav-circle-link active">
             <%= link_to wishlist_path, class: "nav-link", title: "Wishlist" do %>
               <i class="fa-solid fa-heart fa-lg"></i>
             <% end %>
           </li>
-          <li class="nav-item active">
+          <li class="nav-item nav-circle-link active">
             <%= link_to new_boat_path, class: "nav-link", title: "Add a boat" do %>
-              +<i class="fa-solid fa-sailboat fa-lg"></i>
+              <i class="fa-solid fa-plus"></i>
             <% end %>
           </li>
-          <li class="nav-item dropdown">
+          <li class="nav-item nav-circle-link dropdown">
             <button class="navbar-btn"><%= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false, title: "Personal account" %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Dashboard", dashboard_path, class: "dropdown-item" %>
@@ -33,13 +33,20 @@
           </li>
         <% else %>
           <li class="nav-item">
-            <%= link_to "SIGN UP", new_user_registration_path, class: "nav-link" %>
+            <%= link_to "Sign up", new_user_registration_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
-            <%= link_to "LOG IN", new_user_session_path, class: "nav-link" %>
+            <%= link_to "Log in", new_user_session_path, class: "nav-link" %>
           </li>
         <% end %>
       </ul>
     </div>
   </div>
 </div>
+
+
+
+
+
+
+
