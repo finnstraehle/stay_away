@@ -3,3 +3,16 @@ import "@hotwired/turbo-rails"
 import "controllers"
 import "@popperjs/core"
 import "bootstrap"
+//= require turbolinks
+
+// document.addEventListener("turbolinks:load", function() {
+//   window.scrollTo(0, 0);
+// });
+
+// document.addEventListener('turbolinks:visit', function() {
+//   Turbolinks.clearCache();
+// });
+
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+}

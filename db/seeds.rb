@@ -10,13 +10,16 @@ CrewMember.destroy_all
 
 puts 'Creating users...'
 10.times do
-  User.create!(
+  user = User.new(
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
     email: Faker::Internet.email,
     birth_date: Faker::Date.birthday(min_age: 18, max_age: 65),
     password: '123456'
   )
+  file = URI.open('https://source.unsplash.com/300x300/?portrait')
+  user.photo.attach(io: file, filename: user.first_name.to_s, content_type: 'image/png')
+  user.save!
 end
 
 puts 'Creating boats...'
@@ -24,7 +27,7 @@ User.all.each do |user|
   rand(0..4).times do
     boat = Boat.new(
       name: Faker::TvShows::RuPaul.queen,
-      description: Faker::Lorem.paragraph(sentence_count: 10),
+      description: Faker::Lorem.paragraph_by_chars(number: 200),
       price: rand(249..10_459),
       guests: rand(1..15),
       location: Faker::Address.city,
@@ -45,17 +48,17 @@ Boat.all.each do |boat|
       departure: Faker::Date.between(from: Date.today, to: 200.days.from_now),
       boat: boat,
       user: User.all.sample,
-      comment: Faker::Lorem.paragraph(sentence_count: 6)
+      comment: Faker::Lorem.paragraph_by_chars(number: 300)
     )
   end
 end
 
 puts 'Creating reviews...'
 Booking.all.each do |booking|
-  rand(3..20).times do
+  rand(3..10).times do
     Review.create!(
       rating: rand(3..5),
-      comment: Faker::Lorem.paragraph,
+      comment: Faker::Restaurant.review[0..80],
       booking: booking
     )
   end
@@ -63,12 +66,15 @@ end
 
 puts 'Creating crew members...'
 Boat.all.each do |boat|
-  rand(1..12).times do
-    CrewMember.create!(
+  rand(2..6).times do
+    member = CrewMember.new(
       name: Faker::Name.name,
-      description: Faker::Lorem.paragraph,
+      description: Faker::Marketing.buzzwords,
       boat: boat
     )
+    file = URI.open('https://source.unsplash.com/300x300/?portrait')
+    member.photo.attach(io: file, filename: member.name.to_s, content_type: 'image/png')
+    member.save!
   end
 end
 

@@ -3,10 +3,10 @@ class BoatsController < ApplicationController
 
   def index
     @boats = Boat.all
-    
+
     @guests = params[:guests].to_i
     @boats = Boat.where(guests: guests_range)
-    
+
     @markers = @boats.geocoded.map do |boat|
       {
         lat: boat.latitude,
@@ -119,6 +119,6 @@ class BoatsController < ApplicationController
   end
 
   def guests_range
-    ((@guests - 1)..(@guests + 3))
+    ((@guests)..(@guests + 2))
   end
 end

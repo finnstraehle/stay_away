@@ -8,8 +8,8 @@
     </div>
   </div>
   <div class="boats-down">
-    <button class="boats-down-button" onClick="document.getElementById('boat-home-list').scrollIntoView();" >
-    <h3>See our boats</h3>
+    <button class="boats-down-button" onClick="document.getElementById('boat-home-list').scrollIntoView({behavior: 'smooth'});" >
+    <h3>Discover</h3>
     <i class="fa-solid fa-angles-down"></i></button>
   </div>
   <div class="container-big" id="boat-home-list">
@@ -18,10 +18,11 @@
       <% @boats.each do |boat| %>
         <%= link_to boat, class: "card-boat" do %>
           <div class="boat-image">
-          <% boat.photos.each do |photo| %>
-            <%= cl_image_tag photo.key %>
-          <% end %>
-        </div>
+            <% boat.photos.each do |photo| %>
+              <%= cl_image_tag photo.key %>
+            <% end %>
+          </div>
+          <div class="star-icon"><%= icon('fas', 'star',) %></div>
           <div class="boat-infos">
             <h4><%= boat.name %></h4>
             <p><%= boat.description %></p>
@@ -34,4 +35,7 @@
       <% end %>
     </div>
   </div>
+</div>
+<div class="show-map-btn">
+   <a href="<%= home_map_path %>" class="button" style="border-radius: 100%; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);"><i class="fa-regular fa-map" style="font-size: 20px; padding: 10px; margin-bottom: 5px; margin-top: 5px;"></i></a>
 </div>
