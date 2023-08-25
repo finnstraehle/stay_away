@@ -14,10 +14,8 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(user_params)
-    file = URI.open('https://source.unsplash.com/300x300/?portrait')
-    @user.photo.attach(io: file, filename: @user.first_name.to_s, content_type: 'image/png')
-    @user.save!
+    @user = User.new(user_params) 
+    @user.save
     redirect_to user_path(@user)
   end
 
