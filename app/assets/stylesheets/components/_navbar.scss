@@ -17,47 +17,69 @@
 .nav-item {
   margin-right: 20px;
   a {
-  color: $dark-purple !important;
-  font-weight: bold;
-  font-size: 14px;
-    &:hover {
-      color: $extra-light-purple !important;
-      text-decoration: none;
-    }
+    padding-top: 10px !important;
+    color: $dark-purple !important;
+    font-weight: bold;
+    font-size: 14px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.5);
+      &:hover {
+        color: $extra-light-purple !important;
+        text-decoration: none;
+        border: none;
+        background-color: #fff;
+      }
   }
 }
 
-.dropdown-item a {
-  color: $dark-purple !important;
-  font-weight: bold;
-  font-size: 14px;
-    &:hover {
-      color: $extra-light-purple !important;
-      text-decoration: none;
-    }
+.avatar {
+  width: 50px;
+  height: 50px;
+}
+
+.navbar .nav-link {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.navlink i {
+  align-self: center;
+}
+
+.nav-item .dropdown {
+  margin-right: 0;
 }
 
 .navbar-btn {
   filter: grayscale(100%);
   background-color: transparent;
   border: none;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   margin: 0;
   padding: 0;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .navbar-btn:hover {
   filter: none;
-  outline: 2px solid $extra-light-purple;
+  outline: 2px solid #fff;
   margin: 0;
   padding: 0;
 }
 
 .navbar-btn:active {
   filter: none;
-  outline: 2px solid $extra-light-purple;
+  outline: 2px solid #fff;
 }
 
 .dropdown-menu {
@@ -75,4 +97,9 @@
       text-decoration: none;
     }
   }
+}
+
+.nav-line {
+  width: 100%;
+  border-top: 1px solid rgb(214, 214, 214);
 }
