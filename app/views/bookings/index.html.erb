@@ -1,3 +1,51 @@
 <div class="container">
-  <h1>My Bookings</h1>
+  <div class="booking-title-container">
+    <h1>My Received Bookings (<%= @received_bookings.length %>)</h1>
+  </div>
+  <% @received_bookings.each do |booking| %>
+    <div class="booking-card">
+        <%= link_to booking do %>
+          <div class="booking-image">
+            <img src="https://media.fraseryachts.com/Yachts/Y599_KrB_MC/images/website/001B_BABA%27S_profile-ShBwo3Fc.jpg">
+          </div>
+          <div class="booking-card-content">
+            <div class="text">
+              <h2><small><%= booking.boat.name %></small></h2>
+              <p><%= booking.arrival %></p>
+              <p><%= booking.departure %></p>
+              <p><%= booking.comment %></p>
+              <div class="booking-status">
+                <p>Booking Status:</p>
+                <p><strong><%= booking.status %></strong> </p>
+              </div>
+            </div>
+            <div class="booking-card-actions">
+              <a href="<%= accept_path(booking) %>" class="accept-icon" data-turbo-method="patch"><i class="fa-solid fa-check"></i></a>
+              <a href="<%= reject_path(booking) %>" class="reject-icon" data-turbo-method="patch"><i class="fa-regular fa-circle-xmark"></i></a>
+            </div>
+          </div>
+          <% end %>
+          </div>
+    <% end %>
+
+    <div class="booking-title-container sub-bookings">
+      <h1>My Submitted Bookings (<%= @bookings.length %>)</h1>
+    </div>
+    <% @bookings.each do |booking| %>
+    <div class="booking-card">
+        <%= link_to booking do %>
+          <div class="booking-image">
+            <img src="https://media.fraseryachts.com/Yachts/Y599_KrB_MC/images/website/001B_BABA%27S_profile-ShBwo3Fc.jpg">
+          </div>
+          <div class="booking-card-content">
+            <div class="text">
+              <h2><small><%= booking.boat.name %></small></h2>
+              <p><%= booking.boat.description %></p>
+              <p><%= booking.status %></p>
+            </div>
+            <% end %>
+          </div>
+      </div>
+    <% end %>
+  </div>
 </div>
