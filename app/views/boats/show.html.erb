@@ -14,8 +14,11 @@
       <div class="crew-members">
         <% @crew_members.each do |member| %>
           <div class="card-member">
-            <p class="name"><%= member.name %></p>
-            <p class="description"><%= member.description %></p>
+            <%= cl_image_tag member.photo.key %>
+            <div>
+              <p class="name"><%= member.name %></p>
+              <p class="description"><%= member.description %></p>
+            </div>
           </div>
         <% end %>
       </div>
@@ -55,5 +58,3 @@
     </div>
   </div>
 </div>
-
-

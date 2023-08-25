@@ -12,6 +12,7 @@
   padding: 0;
   text-decoration: none;
   transition: all 0.3s ease;
+  position: relative;
   &:hover {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     transform: translateY(-1px);
@@ -29,7 +30,6 @@
 
 .grid-boats .card-boat .boat-infos {
   padding: 20px;
-  position: relative;
   h4 {
     color: $dark-purple;
     font-size: 20px;
@@ -72,4 +72,21 @@
   margin-right: 90px;
 
 
+}
+
+.grid-boats .card-boat .star-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 22px;
+  color: white;
+  opacity: 0;
+  &:hover {
+    color: $light-purple;
+    opacity: 1;
+  }
+}
+
+.grid-boats .card-boat:hover .star-icon {
+  opacity: 0.8;
 }
