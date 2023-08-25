@@ -63,15 +63,9 @@
 }
 
 .show-map-btn {
-  display: flex;
-  justify-content: flex-end;
-  position: sticky;
-  bottom: 1rem;
-  align-self: flex-end;
-  padding-bottom: 50px;
-  margin-right: 90px;
-
-
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
 }
 
 .grid-boats .card-boat .star-icon {
