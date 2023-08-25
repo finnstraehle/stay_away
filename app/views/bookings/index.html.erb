@@ -6,16 +6,14 @@
     <div class="booking-card">
         <%= link_to booking do %>
           <div class="booking-image">
-            <img src="https://media.fraseryachts.com/Yachts/Y599_KrB_MC/images/website/001B_BABA%27S_profile-ShBwo3Fc.jpg">
+            <%= cl_image_tag booking.boat.photos.last.key %>
           </div>
           <div class="booking-card-content">
             <div class="text">
               <h2><small><%= booking.boat.name %></small></h2>
               <p><%= booking.arrival %></p>
               <p><%= booking.departure %></p>
-              <p><%= booking.comment %></p>
               <div class="booking-status">
-                <p>Booking Status:</p>
                 <p><strong><%= booking.status %></strong> </p>
               </div>
             </div>
@@ -35,7 +33,7 @@
     <div class="booking-card">
         <%= link_to booking do %>
           <div class="booking-image">
-            <img src="https://media.fraseryachts.com/Yachts/Y599_KrB_MC/images/website/001B_BABA%27S_profile-ShBwo3Fc.jpg">
+            <%= cl_image_tag booking.boat.photos.last.key %>
           </div>
           <div class="booking-card-content">
             <div class="text">
