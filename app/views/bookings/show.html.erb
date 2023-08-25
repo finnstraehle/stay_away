@@ -1,8 +1,10 @@
 <div class="container">
   <h1>Booking Confirmation</h1>
   <div class="booking-container">
-    <h3><%= @received_bookings.arrival %></h3>
-    <h3><%= @received_bookings.departure %></h3>
+    <%= cl_image_tag @received_bookings.boat.photos.last.key, style: "width: 100%; border-radius: 10px; margin-bottom: 20px;" %>
+    <h3><%= @received_bookings.boat.name %></h3>
+    <hr>
     <p><%= @received_bookings.comment %></p>
+    <hr>
   </div>
 </div>
