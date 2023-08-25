@@ -59,3 +59,20 @@
   filter: none;
   outline: 2px solid $extra-light-purple;
 }
+
+.dropdown-menu {
+  border-radius: 5px !important;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+  padding: 0;
+  margin-top: 10px;
+  width: 100%;
+  a {
+    color: $dark-purple !important;
+    font-weight: bold;
+    font-size: 14px;
+    &:hover {
+      color: $extra-light-purple !important;
+      text-decoration: none;
+    }
+  }
+}
