@@ -90,6 +90,28 @@ class BoatsController < ApplicationController
     redirect_to boats_path, status: :see_other
   end
 
+  def map
+    @boats = Boat.all
+    @markers = @boats.geocoded.map do |boat|
+      {
+        lat: boat.latitude,
+        lng: boat.longitude,
+        info_window_html: render_to_string(
+          partial: "info_window",
+          locals: {
+            boat: boat,
+            reviews_average: if Review.where(booking: Booking.where(boat: boat)).empty?
+                               "no reviews"
+                             else
+                               Review.where(booking: Booking.where(boat: boat)).average(:rating).round(2)
+                             end
+          }
+        ),
+        marker_html: render_to_string(partial: "marker")
+      }
+    end
+  end
+
   private
 
   def boat_params
