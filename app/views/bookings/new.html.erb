@@ -8,7 +8,7 @@
       </div>
     </div>
     <p><%= @boat.description %></p>
-    <%= simple_form_for(@booking) do |f| %>
+    <%= simple_form_for [@boat, @booking] do |f| %>
       <%= f.input :arrival %>
       <%= f.input :departure %>
       <%= f.input :comment %>

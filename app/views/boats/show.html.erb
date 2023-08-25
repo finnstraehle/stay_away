@@ -51,9 +51,7 @@
       <%= f.input :arrival %>
       <%= f.input :departure %>
     <% end %>
-      <%= link_to "BOOK", new_booking_path, class: "button m-3 p-2 btn-login" %>
+      <%= link_to "BOOK", new_boat_booking_path(@boat, @booking), class: "button m-3 p-2 btn-login" %>
     </div>
   </div>
 </div>
-
-
