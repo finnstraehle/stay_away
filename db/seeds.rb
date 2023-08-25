@@ -27,7 +27,7 @@ User.all.each do |user|
   rand(0..4).times do
     boat = Boat.new(
       name: Faker::TvShows::RuPaul.queen,
-      description: Faker::Lorem.paragraph(sentence_count: 10),
+      description: Faker::Lorem.paragraph_by_chars(number: 200),
       price: rand(249..10_459),
       guests: rand(1..15),
       location: Faker::Address.city,
@@ -48,7 +48,7 @@ Boat.all.each do |boat|
       departure: Faker::Date.between(from: Date.today, to: 200.days.from_now),
       boat: boat,
       user: User.all.sample,
-      comment: Faker::Lorem.paragraph(sentence_count: 6)
+      comment: Faker::Lorem.paragraph_by_chars(number: 300)
     )
   end
 end
@@ -58,7 +58,7 @@ Booking.all.each do |booking|
   rand(3..10).times do
     Review.create!(
       rating: rand(3..5),
-      comment: Faker::Lorem.paragraph,
+      comment: Faker::Restaurant.review[0..80],
       booking: booking
     )
   end
@@ -69,7 +69,7 @@ Boat.all.each do |boat|
   rand(2..6).times do
     member = CrewMember.new(
       name: Faker::Name.name,
-      description: Faker::Lorem.paragraph,
+      description: Faker::Marketing.buzzwords,
       boat: boat
     )
     file = URI.open('https://source.unsplash.com/300x300/?portrait')
