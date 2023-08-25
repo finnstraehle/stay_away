@@ -6,6 +6,7 @@
 
 .container-boat-show .card-boat {
   width: 820px; // make responsive
+  position: relative;
   .boat-images img {
     border-radius: 10px;
     height: 500px;
@@ -28,6 +29,14 @@
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   padding: 10px;
+  display: flex;
+  img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+  }
   .name {
     font-size: 14px;
     font-weight: 600;
